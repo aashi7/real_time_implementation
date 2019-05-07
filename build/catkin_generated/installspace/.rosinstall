@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/klab/catkin_ws/install/setup.sh
