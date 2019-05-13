@@ -32,4 +32,22 @@ Ananconda installation location - "/home/klab/anaconda3" (Deleted the previous o
 6) `cd catkin_ws/src/tf-faster-rcnn`
 7) `CUDA_VISIBLE_DEVICES=0 ./tools/demo.py`
 
+### Launching ZED Node in ROS 
+1) `cd catkin_ws/`
+2) `roslaunch zed_display_rviz display_zed.launch`
+3) To run Faster RCNN, I have to do - `unset PYTHONPATH`
 
+### Write a script to implement command line 
+1) Useful blog - Using ROS with Conda (http://yuqli.com/?p=2817)
+Note - `source /opt/ros/kinetic/lib/python2.7/dist-packages/` sets the `PYHONPATH` variable to `/opt/ros/kinetic/...` location. The solution is to unset the `PYTHONPATH` in `~/.bashrc`, right after sourcing ROS, but before sourcing Anaconda env `conda activate venv`. Use `unset PYTHONPATH`      
+NOT NEEDED!
+
+### Ways to solve
+1) One way is that I eliminate ROS as dependency - won't be able to use LiDAR then
+WILL TRY SHORTER PATHS FIRST   
+2)
+`source activate venv` 
+`pip install -U rospkg`  
+SEEMS TO WORK!!
+
+### TO DO: Pass the images coming from ROS Node into the Faster RCNN 
