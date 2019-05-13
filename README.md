@@ -15,12 +15,12 @@ Ran the following command
 `sudo apt-get install cython`
 
 ### Server details 
-On MAC
-`vim ~/.zshrc`
-On Ubuntu 
-`vim ~/.bashrc`
-`alias cube='ssh -Y aashi@128.2.177.239'`
-`alias bheem='ssh -Y aashi@128.2.194.131'`
+On MAC 
+`vim ~/.zshrc`    
+On Ubuntu      
+`vim ~/.bashrc`    
+`alias cube='ssh -Y aashi@128.2.177.239'`    
+`alias bheem='ssh -Y aashi@128.2.194.131'`   
 
 ### Virtual Environment 
 1) `bash ./Anaconda3-2019.03-Linux-x86_64.sh`
