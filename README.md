@@ -10,8 +10,8 @@
 Faster RCNN (https://github.com/endernewton/tf-faster-rcnn)
 
 Issues: 
-1) ImportError: No module named Cython.Distutils
-Ran the following command 
+1) ImportError: No module named Cython.Distutils  
+Ran the following command   
 `sudo apt-get install cython`
 
 ### Server details 
@@ -23,7 +23,7 @@ On Ubuntu
 `alias bheem='ssh -Y aashi@128.2.194.131'`   
 
 ### Virtual Environment 
-1) `bash ./Anaconda3-2019.03-Linux-x86_64.sh`
+1) `bash ./Anaconda3-2019.03-Linux-x86_64.sh`  
 Ananconda installation location - "/home/klab/anaconda3" (Deleted the previous one) 
 2) `conda create -n venv python=3.5 anaconda`
 3) `conda activate venv`
@@ -46,9 +46,25 @@ NOT NEEDED!
 1) One way is that I eliminate ROS as dependency - won't be able to use LiDAR then
 WILL TRY SHORTER PATHS FIRST   
 2)
-`source activate venv` 
+`source activate venv`   
 `pip install -U rospkg`  
 SEEMS TO WORK!!
 
 ### TO DO: Pass the images coming from ROS Node into the Faster RCNN 
 1) Create a python file where I subscribe to a ROS Node and pass it in the Faster RCNN using demo.py. Have this file at the same place as demo.py. 
+
+### May 14, 2019 
+`source activate venv`  
+`source /home/klab/catkin_ws/devel/setup.bash`  
+`roslaunch zed_display_rviz display_zed.launch`      
+`rosrun cam_to_tf run_on_cam.py`
+
+### Issues
+ cv_bridge is available for python2 and cannot be used in py3. You can try running in python2.
+ => Have a python2 virtual environment  
+`conda create -n venv python=2.7 anaconda`     
+`pip install tensorflow-gpu`    
+`conda install cudatoolkit`    
+`conda install cudnn`    
+`pip install --upgrade tensorflowgpu==1.8.0`  
+Downgrading to 1.8.0 solved the problem!
