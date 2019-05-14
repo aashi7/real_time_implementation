@@ -53,90 +53,90 @@ CMAKE_BINARY_DIR = /home/klab/catkin_ws/build
 # Include the progress variables for this target.
 include zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/progress.make
 
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h
 
 
-/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
-/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from zed_wrapper/toggle_led.srv"
-	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
+/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
+/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from zed_wrapper/reset_odometry.srv"
+	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
+/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from zed_wrapper/set_pose.srv"
+	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from zed_wrapper/start_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from zed_wrapper/start_remote_stream.srv"
 	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
+/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from zed_wrapper/stop_svo_recording.srv"
+	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from zed_wrapper/start_svo_recording.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from zed_wrapper/start_svo_recording.srv"
 	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
+/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from zed_wrapper/toggle_led.srv"
+	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv
 /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from zed_wrapper/set_led_status.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from zed_wrapper/set_led_status.srv"
 	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv
 /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from zed_wrapper/stop_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from zed_wrapper/stop_remote_stream.srv"
 	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
-
-/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
-/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from zed_wrapper/stop_svo_recording.srv"
-	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv
 /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from zed_wrapper/reset_tracking.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from zed_wrapper/reset_tracking.srv"
 	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
 
-/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
-/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from zed_wrapper/set_pose.srv"
-	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
-
-/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
-/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from zed_wrapper/reset_odometry.srv"
-	cd /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper && /home/klab/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/include/zed_wrapper -e /opt/ros/kinetic/share/gencpp/cmake/..
-
 zed_wrapper_generate_messages_cpp: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp
-zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h
+zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h
+zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h
 zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/start_remote_stream.h
+zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h
 zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/start_svo_recording.h
+zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/toggle_led.h
 zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_led_status.h
 zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_remote_stream.h
-zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/stop_svo_recording.h
 zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_tracking.h
-zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/set_pose.h
-zed_wrapper_generate_messages_cpp: /home/klab/catkin_ws/devel/include/zed_wrapper/reset_odometry.h
 zed_wrapper_generate_messages_cpp: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/build.make
 
 .PHONY : zed_wrapper_generate_messages_cpp

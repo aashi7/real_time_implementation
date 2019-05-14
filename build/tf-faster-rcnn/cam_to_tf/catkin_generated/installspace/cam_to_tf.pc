@@ -1,0 +1,8 @@
+prefix=/home/klab/catkin_ws/install
+
+Name: cam_to_tf
+Description: Description of cam_to_tf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/klab/catkin_ws/install/lib 
+Requires: 

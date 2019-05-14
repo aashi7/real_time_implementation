@@ -17,6 +17,26 @@ add_custom_target(zed_wrapper_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" ""
+)
+
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" ""
+)
+
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" ""
+)
+
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" ""
+)
+
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" ""
@@ -32,29 +52,9 @@ add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" ""
 )
 
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" ""
-)
-
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" ""
-)
-
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
 add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" ""
-)
-
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" ""
-)
-
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
-add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_wrapper" "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" ""
 )
 
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
@@ -71,7 +71,13 @@ add_custom_target(_zed_wrapper_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_cpp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
@@ -83,7 +89,19 @@ _generate_srv_cpp(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_cpp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_cpp(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_cpp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
@@ -101,25 +119,7 @@ _generate_srv_cpp(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_cpp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_cpp(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_cpp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_cpp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_wrapper
@@ -137,21 +137,21 @@ add_custom_target(zed_wrapper_generate_messages_cpp
 add_dependencies(zed_wrapper_generate_messages zed_wrapper_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_cpp _zed_wrapper_generate_messages_check_deps_${_filename})
@@ -168,7 +168,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS zed_wrapper_generate_messages_cpp)
 
 ### Generating Services
 _generate_srv_eus(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_eus(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
@@ -180,7 +186,19 @@ _generate_srv_eus(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_eus(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_eus(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_eus(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
@@ -198,25 +216,7 @@ _generate_srv_eus(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_eus(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_eus(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_eus(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_eus(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_wrapper
@@ -234,21 +234,21 @@ add_custom_target(zed_wrapper_generate_messages_eus
 add_dependencies(zed_wrapper_generate_messages zed_wrapper_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_eus _zed_wrapper_generate_messages_check_deps_${_filename})
@@ -265,7 +265,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS zed_wrapper_generate_messages_eus)
 
 ### Generating Services
 _generate_srv_lisp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_lisp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
@@ -277,7 +283,19 @@ _generate_srv_lisp(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_lisp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_lisp(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_lisp(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
@@ -295,25 +313,7 @@ _generate_srv_lisp(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_lisp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_lisp(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_lisp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_lisp(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_wrapper
@@ -331,21 +331,21 @@ add_custom_target(zed_wrapper_generate_messages_lisp
 add_dependencies(zed_wrapper_generate_messages zed_wrapper_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_lisp _zed_wrapper_generate_messages_check_deps_${_filename})
@@ -362,7 +362,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS zed_wrapper_generate_messages_lisp)
 
 ### Generating Services
 _generate_srv_nodejs(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_nodejs(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
@@ -374,7 +380,19 @@ _generate_srv_nodejs(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_nodejs(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_nodejs(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_nodejs(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
@@ -392,25 +410,7 @@ _generate_srv_nodejs(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_nodejs(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_nodejs(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_nodejs(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_nodejs(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_wrapper
@@ -428,21 +428,21 @@ add_custom_target(zed_wrapper_generate_messages_nodejs
 add_dependencies(zed_wrapper_generate_messages zed_wrapper_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_nodejs _zed_wrapper_generate_messages_check_deps_${_filename})
@@ -459,7 +459,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS zed_wrapper_generate_messages_nodej
 
 ### Generating Services
 _generate_srv_py(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_py(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
@@ -471,7 +477,19 @@ _generate_srv_py(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_py(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_py(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
+)
+_generate_srv_py(zed_wrapper
+  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
@@ -489,25 +507,7 @@ _generate_srv_py(zed_wrapper
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
 )
 _generate_srv_py(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_py(zed_wrapper
   "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_py(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
-)
-_generate_srv_py(zed_wrapper
-  "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_wrapper
@@ -525,21 +525,21 @@ add_custom_target(zed_wrapper_generate_messages_py
 add_dependencies(zed_wrapper_generate_messages zed_wrapper_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
+add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv" NAME_WE)
-add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" NAME_WE)
 add_dependencies(zed_wrapper_generate_messages_py _zed_wrapper_generate_messages_check_deps_${_filename})

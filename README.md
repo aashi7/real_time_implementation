@@ -51,3 +51,4 @@ WILL TRY SHORTER PATHS FIRST
 SEEMS TO WORK!!
 
 ### TO DO: Pass the images coming from ROS Node into the Faster RCNN 
+1) Create a python file where I subscribe to a ROS Node and pass it in the Faster RCNN using demo.py. Have this file at the same place as demo.py. 

@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "/home/klab/catkin_ws/devel/include/zed_wrapper/ZedConfig.h"
   "/home/klab/catkin_ws/devel/share/zed_wrapper/docs/ZedConfig.dox"
   "/home/klab/catkin_ws/devel/share/zed_wrapper/docs/ZedConfig-usage.dox"
-  "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper/cfg/ZedConfig.py"
+  "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper/cfg/ZedConfig.py"
   "/home/klab/catkin_ws/devel/share/zed_wrapper/docs/ZedConfig.wikidoc"
 )
 

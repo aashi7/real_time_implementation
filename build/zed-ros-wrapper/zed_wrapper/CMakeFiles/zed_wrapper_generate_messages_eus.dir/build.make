@@ -53,77 +53,77 @@ CMAKE_BINARY_DIR = /home/klab/catkin_ws/build
 # Include the progress variables for this target.
 include zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make
 
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_remote_stream.l
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_led_status.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_remote_stream.l
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_tracking.l
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/manifest.l
 
 
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from zed_wrapper/toggle_led.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from zed_wrapper/reset_odometry.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from zed_wrapper/set_pose.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_remote_stream.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_remote_stream.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from zed_wrapper/start_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from zed_wrapper/start_remote_stream.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from zed_wrapper/stop_svo_recording.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from zed_wrapper/start_svo_recording.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from zed_wrapper/start_svo_recording.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from zed_wrapper/toggle_led.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_led_status.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_led_status.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from zed_wrapper/set_led_status.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from zed_wrapper/set_led_status.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_remote_stream.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_remote_stream.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from zed_wrapper/stop_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from zed_wrapper/stop_remote_stream.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
-
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from zed_wrapper/stop_svo_recording.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_tracking.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_tracking.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from zed_wrapper/reset_tracking.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating EusLisp code from zed_wrapper/reset_tracking.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
-
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from zed_wrapper/set_pose.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
-
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating EusLisp code from zed_wrapper/reset_odometry.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating EusLisp manifest code for zed_wrapper"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper zed_wrapper
 
 zed_wrapper_generate_messages_eus: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus
-zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l
+zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l
+zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_remote_stream.l
+zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l
+zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/toggle_led.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_led_status.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_remote_stream.l
-zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_tracking.l
-zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/set_pose.l
-zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/srv/reset_odometry.l
 zed_wrapper_generate_messages_eus: /home/klab/catkin_ws/devel/share/roseus/ros/zed_wrapper/manifest.l
 zed_wrapper_generate_messages_eus: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/build.make
 

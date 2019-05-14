@@ -53,72 +53,72 @@ CMAKE_BINARY_DIR = /home/klab/catkin_ws/build
 # Include the progress variables for this target.
 include zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make
 
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_remote_stream.js
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js
+zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_led_status.js
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_remote_stream.js
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_tracking.js
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js
-zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js
 
 
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from zed_wrapper/toggle_led.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from zed_wrapper/reset_odometry.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from zed_wrapper/set_pose.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_remote_stream.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_remote_stream.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from zed_wrapper/start_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from zed_wrapper/start_remote_stream.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from zed_wrapper/stop_svo_recording.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from zed_wrapper/start_svo_recording.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from zed_wrapper/start_svo_recording.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
+
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from zed_wrapper/toggle_led.srv"
+	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/toggle_led.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_led_status.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_led_status.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from zed_wrapper/set_led_status.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from zed_wrapper/set_led_status.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_led_status.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_remote_stream.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_remote_stream.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from zed_wrapper/stop_remote_stream.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from zed_wrapper/stop_remote_stream.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_remote_stream.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
-
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from zed_wrapper/stop_svo_recording.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_tracking.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_tracking.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from zed_wrapper/reset_tracking.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from zed_wrapper/reset_tracking.srv"
 	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
 
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from zed_wrapper/set_pose.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/set_pose.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
-
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js: /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/klab/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from zed_wrapper/reset_odometry.srv"
-	cd /home/klab/catkin_ws/build/zed-ros-wrapper/zed_wrapper && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/klab/catkin_ws/src/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv -p zed_wrapper -o /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv
-
 zed_wrapper_generate_messages_nodejs: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs
-zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js
+zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js
+zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js
 zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_remote_stream.js
+zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
 zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js
+zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/toggle_led.js
 zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_led_status.js
 zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_remote_stream.js
-zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
 zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_tracking.js
-zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/set_pose.js
-zed_wrapper_generate_messages_nodejs: /home/klab/catkin_ws/devel/share/gennodejs/ros/zed_wrapper/srv/reset_odometry.js
 zed_wrapper_generate_messages_nodejs: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/build.make
 
 .PHONY : zed_wrapper_generate_messages_nodejs

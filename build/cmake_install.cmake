@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/klab/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/klab/catkin_ws/build/tf-faster-rcnn/cam_to_tf/cmake_install.cmake")
   include("/home/klab/catkin_ws/build/zed-ros-wrapper/examples/zed_ar_track_alvar_example/cmake_install.cmake")
   include("/home/klab/catkin_ws/build/zed-ros-wrapper/tutorials/zed_depth_sub_tutorial/cmake_install.cmake")
   include("/home/klab/catkin_ws/build/zed-ros-wrapper/zed_display_rviz/cmake_install.cmake")

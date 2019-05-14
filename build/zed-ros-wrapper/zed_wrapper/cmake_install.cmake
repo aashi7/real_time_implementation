@@ -67,11 +67,11 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -79,15 +79,15 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/zed_wrapper" TYPE FILE FILES "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/zed_wrapper" TYPE FILE FILES "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper/__init__.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper/cfg")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper/cfg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/zed_wrapper" TYPE DIRECTORY FILES "/home/klab/catkin_ws/devel/lib/python3/dist-packages/zed_wrapper/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/zed_wrapper" TYPE DIRECTORY FILES "/home/klab/catkin_ws/devel/lib/python2.7/dist-packages/zed_wrapper/cfg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
