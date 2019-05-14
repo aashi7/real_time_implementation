@@ -60,7 +60,8 @@ SEEMS TO WORK!!
 `rosrun cam_to_tf run_on_cam.py`
 
 ### Issues
- cv_bridge is available for python2 and cannot be used in py3. You can try running in python2.
+1)    
+cv_bridge is available for python2 and cannot be used in py3. You can try running in python2.
  => Have a python2 virtual environment    
 `conda create -n venv python=2.7 anaconda`     
 `pip install tensorflow-gpu`    
@@ -68,3 +69,21 @@ SEEMS TO WORK!!
 `conda install cudnn`    
 `pip install --upgrade tensorflow-gpu==1.8.0`  
 Downgrading to 1.8.0 solved the problem!
+
+2) 
+`fatal: Pathspec '.' is in submodule 'src/tf-faster-rcnn'`
+`git rm --cached tf-faster-rcnn`  
+
+3) 
+Cannot push data folder; max limit reached on github  
+`git add .`     
+`git rm -r --cached src/tf-faster-rcnn/data/voc_2007_trainval+voc_2012_trainval`
+
+### TO DO: Run my prediction network on input frames 
+1)   
+a) Locate my model and test code   
+b) Bring it on predator, should be able to run it in the same python2.7 virtual environment python2env   
+c) Then, pass input frames through my network   
+d) How will I store a tuple of frames in callback?    
+
+## a) Locate my model
