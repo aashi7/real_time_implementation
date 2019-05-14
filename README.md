@@ -61,10 +61,10 @@ SEEMS TO WORK!!
 
 ### Issues
  cv_bridge is available for python2 and cannot be used in py3. You can try running in python2.
- => Have a python2 virtual environment  
+ => Have a python2 virtual environment    
 `conda create -n venv python=2.7 anaconda`     
 `pip install tensorflow-gpu`    
 `conda install cudatoolkit`    
 `conda install cudnn`    
-`pip install --upgrade tensorflowgpu==1.8.0`  
+`pip install --upgrade tensorflow-gpu==1.8.0`  
 Downgrading to 1.8.0 solved the problem!
