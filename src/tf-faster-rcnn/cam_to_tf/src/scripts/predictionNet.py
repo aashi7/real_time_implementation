@@ -36,16 +36,32 @@ class FrameDataset(data.Dataset):
 		return len(self.f["rgb"])
 
 
+def load_vgg_voc_weights(MODEL_PATH):
+    checkpoint_dict = torch.load(MODEL_PATH)
+    vgg_model.load_state_dict(checkpoint_dict)
+
+vgg_model = models.vgg16(pretrained=True)
+num_final_in = vgg_model.classifier[-1].in_features
+NUM_CLASSES = 20 ## in VOC
+vgg_model.classifier[-1] = nn.Linear(num_final_in, NUM_CLASSES)
+#model_path = '/home/aashi/the_conclusion/model_files/' + 'vgg_on_voc' + str(800)
+model_path = '../../../data/vgg_on_voc800'
+load_vgg_voc_weights(model_path)
+
 class VGGNet(nn.Module):
 
 	def __init__(self):
 
 		super(VGGNet, self).__init__()
 
-		self.vgg_model = models.vgg16(pretrained=True)
+		# self.vgg_model = models.vgg16(pretrained=True)
 		# num_final_in = self.vgg_model.classifier[-1].in_features 
 		# NUM_CLASSES = 20 
 		# self.vgg_model.classifier[-1] = nn.Linear(num_final_in, NUM_CLASSES) 
+
+		# model_path = '../../../data/vgg_on_voc800'
+
+		# self.vgg_model.load_state_dict(torch.load(model_path))
 
 		self.rgb_net = self.get_vgg_features()
 
@@ -82,7 +98,7 @@ class VGGNet(nn.Module):
 
 	def get_vgg_features(self):
 
-		modules = list(self.vgg_model.children())[:-1]
+		modules = list(vgg_model.children())[:-1]
 		vgg16 = nn.Sequential(*modules)
 		return vgg16.type(torch.Tensor)
 
@@ -108,6 +124,8 @@ def test():
 
 	model.eval()
 
+	print("Loaded the prediction network")
+
 	err = []
 
 	for iter, (img, rgb, label) in enumerate(test_loader, 0):
@@ -118,12 +136,12 @@ def test():
 		outputs = model(rgb)
 
 		gt = label[0].data.cpu().numpy() + mean 
-		pred = label[0].data.cpu().numpy() + mean 
+		pred = outputs[0].data.cpu().numpy() + mean 
 
 		err.append(abs(pred[0] - gt[0]))
 
 	print(np.mean(err))
-	pritn(np.std(err))
+	print(np.std(err))
 
 
 if __name__ == '__main__':
