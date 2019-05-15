@@ -77,7 +77,7 @@ Downgrading to 1.8.0 solved the problem!
 3) 
 Cannot push data folder; max limit reached on github  
 `git add .`     
-`git rm -r --cached src/tf-faster-rcnn/data/voc_2007_trainval+voc_2012_trainval`
+`git rm -r --cached src/tf-faster-rcnn/data`
 
 ### TO DO: Run my prediction network on input frames 
 1)   
@@ -87,3 +87,11 @@ c) Then, pass input frames through my network
 d) How will I store a tuple of frames in callback?    
 
 ## a) Locate my model
+`tf-faster-rcnn/data/6Image6s_027`  
+`tf-faster-rcnn/data/vgg_on_voc800`  
+
+## b) Run the model on h5 in `python2env`   
+`python predictionNet.py`
+
+## TO DO: How to store a tuple of frames in callback or later? 
+
