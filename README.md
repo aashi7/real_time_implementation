@@ -71,7 +71,7 @@ cv_bridge is available for python2 and cannot be used in py3. You can try runnin
 Downgrading to 1.8.0 solved the problem!
 
 2) 
-`fatal: Pathspec '.' is in submodule 'src/tf-faster-rcnn'`
+`fatal: Pathspec '.' is in submodule 'src/tf-faster-rcnn'`  
 `git rm --cached tf-faster-rcnn`  
 
 3) 
