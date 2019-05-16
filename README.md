@@ -95,3 +95,30 @@ d) How will I store a tuple of frames in callback?
 
 ## TO DO: How to store a tuple of frames in callback or later? 
 
+
+### May 16, 2019 
+
+Few points:
+
+1) SingleImage6s_047 is 545M whereas 6Image6s_027 is 94M : 
+One of the explanation for this could be that the vgg model is not saved in 6Image6s_027. Does this mean the VGG network is not fine-tuned on my dataset? I can confirm by comparing the weights with vgg_on_voc800.
+
+2) Imported from my old repo aashi7/short_term_prediction 
+Data on /mnt/hdd1/aashi/cmu_data/
+#### Training and Test Data Info 
+|N| Left/Right images  | Labels       | LIDAR/Stereo | Bounding boxes      |       
+|-| ------------------ | -------      | ------------ | ------------------  |
+|1|  left_imgs         | labels       |   Stereo     | dets_mask_rcnn      |
+|2|  left_imgs_3       | labels_3     |   Stereo     | dets_mask_rcnn_test |
+|3|  left_imgs_nov_2   | labels_left_2|   LIDAR      | det_left_2          |
+|4|                    | labels_right_2|  LIDAR      | det_right_2         | 
+
+
+3) What to do when github is ahead by X commits?  
+`git status`   
+`git pull --rebase`  - Didn't help   
+`git checkout`
+`git reset --hard`
+
+
+
