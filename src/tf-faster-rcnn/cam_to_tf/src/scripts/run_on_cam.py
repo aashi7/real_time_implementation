@@ -29,6 +29,26 @@ import argparse
 from nets.vgg16 import vgg16
 from nets.resnet_v1 import resnetv1
 
+
+##### Imports for prediction network #####
+import torch
+import torchvision.models as models
+import h5py 
+from logger import Logger
+from torchvision.transforms import transforms 
+import torch.utils.data as data
+import numpy as np 
+import pdb
+import torch.nn as nn 
+import torch.optim as optim 
+from torch.autograd import Variable
+import shutil
+import os 
+import random
+import torch.nn.functional as F
+##########################################
+
+
 CLASSES = ('__background__',
 		   'aeroplane', 'bicycle', 'bird', 'boat',
 		   'bottle', 'bus', 'car', 'cat', 'chair',
@@ -39,9 +59,60 @@ CLASSES = ('__background__',
 NETS = {'vgg16': ('vgg16_faster_rcnn_iter_70000.ckpt',),'res101': ('res101_faster_rcnn_iter_110000.ckpt',)}
 DATASETS= {'pascal_voc': ('voc_2007_trainval',),'pascal_voc_0712': ('voc_2007_trainval+voc_2012_trainval',)}
 
+## I want to load the model only once 
+class predictNearCollision:
+
+	def __init__(self):
+
+		model = models.vgg16(pretrained=False)
+		num_final_in = model.classifier[-1].in_features
+
+		model.classifier[-1] = nn.Linear(num_final_in, 1) ## Regressed output
+		num_features = model.classifier[6].in_features
+		features = list(model.classifier.children())[:-1] # Remove last layer
+		features.extend([nn.Linear(num_features, 2048), nn.ReLU(), nn.Linear(2048, 1)]) # Add our layer with 4 outputs
+		model.classifier = nn.Sequential(*features) # Replace the model classifier
+
+		epoch_num = 47 ## Absolute mean error = 0.3022 
+		MODEL_PATH = '../../../data/model_files/SingleImage6s_' + str(epoch_num).zfill(3)
+		
+		model.load_state_dict(torch.load(MODEL_PATH))
+		
+		self.model = model.cuda()
+		self.model.eval()
+
+		## Get the mean and variance
+		hfp_test = h5py.File('../../../data/SingleImageTest.h5','r')
+		self.mean = hfp_test["Mean"][()]
+		self.var = hfp_test["Variance"][()]
+
+	def getNearCollisionTime(self, cv_image):
+
+		## Preprocessing  
+		## Resize 
+		r_img = cv2.resize(cv_image, (224, 224))
+		normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], 
+			std=[0.229, 0.224, 0.225])
+		transform = transforms.Compose([transforms.ToTensor(), normalize])
+		rgb = transform(r_img)
+
+		## unsqueeze it to become torch.Size([1, 3, 224, 224])
+		rgb = rgb.unsqueeze(0)
+		rgb = rgb.float().cuda()
+
+		outputs = self.model(rgb)
+
+		pred = outputs[0].data.cpu().numpy()*self.var + self.mean 
+
+		return pred[0]
+
+
 class image_converter:
 
 	def __init__(self):
+
+		## Object of predictNearCollision class will be created here 
+		self.predNet = predictNearCollision()
 
 		self.bridge = CvBridge()
 		self.image_sub = rospy.Subscriber("/zed/zed_node/rgb/image_rect_color", Image, 
@@ -126,23 +197,27 @@ class image_converter:
 
 		## cv_image is my im
 
-		scores, boxes = im_detect(self.sess, 
-			self.net, cv_image) 
+		# scores, boxes = im_detect(self.sess, 
+		# 	self.net, cv_image) 
 
-		# Visualize detections for each class 
-		CONF_THRESH = 0.8 
-		NMS_THRESH = 0.3 
+		# # Visualize detections for each class 
+		# CONF_THRESH = 0.8 
+		# NMS_THRESH = 0.3 
 
-		# Only concerned with pedestrian class 
-		cls_ind = 15
-		cls = CLASSES[cls_ind]
-		cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
-		cls_scores = scores[:, cls_ind]
-		dets = np.hstack((cls_boxes, cls_scores[:, 
-			np.newaxis])).astype(np.float32)
-		keep = nms(dets, NMS_THRESH)
-		dets = dets[keep,:]
-		self.vis_detections(cv_image, cls, dets, thresh=CONF_THRESH)		
+		# # Only concerned with pedestrian class 
+		# cls_ind = 15
+		# cls = CLASSES[cls_ind]
+		# cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
+		# cls_scores = scores[:, cls_ind]
+		# dets = np.hstack((cls_boxes, cls_scores[:, 
+		# 	np.newaxis])).astype(np.float32)
+		# keep = nms(dets, NMS_THRESH)
+		# dets = dets[keep,:]
+		# self.vis_detections(cv_image, cls, dets, thresh=CONF_THRESH)	
+
+		## cv_image is my im to be passed into the network
+		t = self.predNet.getNearCollisionTime(cv_image) 
+		pdb.set_trace()
 
 
 def main(args):

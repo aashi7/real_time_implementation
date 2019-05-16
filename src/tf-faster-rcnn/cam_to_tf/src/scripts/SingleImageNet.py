@@ -24,7 +24,9 @@ class FrameDataset(data.Dataset):
 		
 	def __getitem__(self, index):
 
-		rgb = np.array(self.f["rgb"][index])
+		rgb = np.array(self.f["rgb"][index]) 
+		## (224, 224, 3)
+
 		label = np.array((self.f["labels"][index] - self.f["Mean"])/self.f["Variance"])
 
 		t_rgb = torch.zeros(3, 224, 224)
@@ -41,7 +43,7 @@ class FrameDataset(data.Dataset):
 
 def test():
 
-	model = models.vgg16(pretrained=True)
+	model = models.vgg16(pretrained=False)
 	num_final_in = model.classifier[-1].in_features
 
 	model.classifier[-1] = nn.Linear(num_final_in, 1) ## Regressed output
@@ -70,6 +72,8 @@ def test():
 	err = []
 
 	for iter, (img, rgb, label) in enumerate(test_loader, 0):
+		pdb.set_trace()
+		## rgb: torch.Size([1, 3, 224, 224])
 		rgb = rgb.float().cuda()
 		label = label.float().cuda()
 		label = label.unsqueeze(-1)
