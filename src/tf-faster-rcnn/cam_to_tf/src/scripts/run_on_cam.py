@@ -190,6 +190,8 @@ class image_converter:
 
 	def callback(self,data):
 
+		#pdb.set_trace() ## Trace to see the GPU allocation 
+
 		try:
 			cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
 		except CvBridgeError as e:
@@ -197,18 +199,20 @@ class image_converter:
 
 		## cv_image is my im
 
-		# scores, boxes = im_detect(self.sess, 
-		# 	self.net, cv_image) 
+		scores, boxes = im_detect(self.sess, 
+			self.net, cv_image) 
 
 		# # Visualize detections for each class 
-		# CONF_THRESH = 0.8 
-		# NMS_THRESH = 0.3 
+		CONF_THRESH = 0.8 
+		NMS_THRESH = 0.3 
 
 		# # Only concerned with pedestrian class 
-		# cls_ind = 15
-		# cls = CLASSES[cls_ind]
-		# cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
-		# cls_scores = scores[:, cls_ind]
+		cls_ind = 15
+		cls = CLASSES[cls_ind]
+		cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
+		cls_scores = scores[:, cls_ind]
+
+		pdb.set_trace()
 		# dets = np.hstack((cls_boxes, cls_scores[:, 
 		# 	np.newaxis])).astype(np.float32)
 		# keep = nms(dets, NMS_THRESH)
@@ -217,7 +221,8 @@ class image_converter:
 
 		## cv_image is my im to be passed into the network
 		t = self.predNet.getNearCollisionTime(cv_image) 
-		pdb.set_trace()
+		#pdb.set_trace()
+
 
 
 def main(args):

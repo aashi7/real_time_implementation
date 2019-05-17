@@ -121,4 +121,12 @@ Data on /mnt/hdd1/aashi/cmu_data/
 `git reset --hard`
 
 
+### May 17, 2019 
 
+## TO DO: Fix GPU allocation for single image 
+
+1) Launch the ZED wrapper without Rviz (Rviz takes 698MiB)
+`roslaunch zed_wrapper zed.launch`
+
+2) To kill a process on GPU
+`kill -9 pid`
