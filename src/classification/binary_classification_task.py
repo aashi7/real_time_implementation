@@ -122,7 +122,6 @@ class VGGNet(nn.Module):
         self.conv_bn = nn.BatchNorm2d(16)
         self.feature_size = 16*7*7*4
         self.final_layer = nn.Sequential(
-        nn.Dropout(),
         nn.Linear(self.feature_size, 256),
         nn.Linear(256, 2),  ## 4 classes instead of 2 
         nn.Softmax()  ## If loss function uses Softmax  
