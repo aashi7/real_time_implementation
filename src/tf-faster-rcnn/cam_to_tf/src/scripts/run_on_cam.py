@@ -48,6 +48,16 @@ import random
 import torch.nn.functional as F
 ##########################################
 
+## latency 
+import timeit 
+
+## For multiple frames 
+from collections import deque 
+
+## For publishing time 
+from std_msgs.msg import String 
+##########################################
+
 
 CLASSES = ('__background__',
 		   'aeroplane', 'bicycle', 'bird', 'boat',
@@ -113,6 +123,9 @@ class image_converter:
 
 		## Object of predictNearCollision class will be created here 
 		self.predNet = predictNearCollision()
+		# self.nstream = MultiStreamNearCollision().cuda()
+
+		# self.nstream.load_state_dict(torch.load('../../../data/model_files/4Image6s_004'))
 
 		self.bridge = CvBridge()
 		self.image_sub = rospy.Subscriber("/zed/zed_node/rgb/image_rect_color", Image, 
@@ -153,6 +166,14 @@ class image_converter:
 
 		print('Loaded network {:s}'.format(tfmodel))
 
+		self.counter = 0 ## Intializing a counter, alternately I can initialize a queue 
+
+		self.stack_imgs = deque(maxlen=4)   ## 4 frames 
+
+		## To check the frequency 
+		#self.image_pub = rospy.Publisher("image_topic_2", Image)
+		self.time_pub = rospy.Publisher('near_collision_time', String, queue_size = 10)
+
 
 	def parse_args(self):
 		"""Parse input arguments."""
@@ -165,7 +186,7 @@ class image_converter:
 
 		return args
 
-	def vis_detections(self, im, class_name, dets, thresh=0.5):
+	def vis_detections(self, im, class_name, dets, time, thresh=0.5):
 		"""Draw detected bounding boxes."""
 		inds = np.where(dets[:, -1] >= thresh)[0]
 		if len(inds) == 0:
@@ -180,11 +201,12 @@ class image_converter:
 				(int(bbox[2]), int(bbox[3])),
 				(255, 255, 0), 2)
 
-			cv2.putText(im, str(class_name)+str(score), (int(bbox[0]), int(bbox[1]-2)), 
-				cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255))
+			cv2.putText(im,  str(time) + " s", (int(bbox[0]), int(bbox[1]-2)), 
+				cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3) ## thickness = 3, blue color 
 
 
 		cv2.imshow("Image window", im)
+		#cv2.imwrite('predictions/'+str(self.counter)+'.png', im)
 		cv2.waitKey(1)
 
 
@@ -202,27 +224,50 @@ class image_converter:
 		scores, boxes = im_detect(self.sess, 
 			self.net, cv_image) 
 
+
 		# # Visualize detections for each class 
 		CONF_THRESH = 0.8 
 		NMS_THRESH = 0.3 
 
-		# # Only concerned with pedestrian class 
+		## cv_image is my im to be passed into the network
+
+
+		# spatial_features = self.nstream.preprocess(cv_image)
+
+		# self.stack_imgs.append(spatial_features)
+		#print(len(self.stack_imgs)) ## will keep on discarding the previous frames and keep the latest four 
+		
+		t = self.predNet.getNearCollisionTime(cv_image)
+		# if (len(self.stack_imgs) == 4):
+		# 	t = self.nstream(stack_imgs)
+		# else:
+		# 	t = 1000  
+		
+		#print(self.counter)
+
+		######### Visualization ############
+
+		## Only concerned with the pedestrian class 
+
 		cls_ind = 15
 		cls = CLASSES[cls_ind]
-		cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
+		# cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
 		cls_scores = scores[:, cls_ind]
 
-		pdb.set_trace()
 		# dets = np.hstack((cls_boxes, cls_scores[:, 
 		# 	np.newaxis])).astype(np.float32)
 		# keep = nms(dets, NMS_THRESH)
 		# dets = dets[keep,:]
-		# self.vis_detections(cv_image, cls, dets, thresh=CONF_THRESH)	
+		# self.vis_detections(cv_image, cls, dets, t, thresh=CONF_THRESH)	
+		self.counter = self.counter + 1
 
-		## cv_image is my im to be passed into the network
-		t = self.predNet.getNearCollisionTime(cv_image) 
-		#pdb.set_trace()
+		## If I publish this on a node, I can see the frequency of this callback 
+		# try: 
+		# 	self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
+		# except CvBridgeError as e:
+		# 	print(e)
 
+		self.time_pub.publish(str(t))
 
 
 def main(args):
